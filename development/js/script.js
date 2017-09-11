@@ -19,4 +19,17 @@ $(function() {
     carouselList.css({marginLeft:0});
   };
   changeSlide();
+
+  var leftArrow = $( ".fa-arrow-left" ),
+      rightArrow = $( ".fa-arrow-right" );
+  $(leftArrow).click(function() {
+    carouselList.animate({'marginLeft':400}, 500, moveFirstSlide);
+  });
+  $(rightArrow).click(function() {
+  carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
+  }
+);
+for (var i = 0; i<= carouselList; i++) {
+  $('<i class="fa fa-circle" aria-hidden="true"></i>');
+}
 });
