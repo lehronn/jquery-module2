@@ -7,11 +7,22 @@ $(function() {
 
   var carouselList = $("#carousel ul");
 
-  var changeSlide = function() {
-  setInterval(changeSlide, 3000);
-  carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
-};
+  var imgs = $("#carousel img");
+  console.log(imgs);
 
+  var kropka = $("body").append('<div class="carousel-counter"></div>');
+  console.log(kropka);
+
+  var countersDiv = $("#carousel-counter div"); console.log(imgs);
+
+  $(imgs).each(function( index, elem ) {
+    $(kropka).append('<i class="fa fa-circle-o" aria-hidden="true">'); //dodaje kropke
+  });
+
+  var changeSlide = function() {
+    setTimeout(changeSlide, 3000);
+    carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
+};
   var moveFirstSlide = function() {
     var firstItem = carouselList.find("li:first"),
         lastItem = carouselList.find("li:last");
