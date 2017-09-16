@@ -8,15 +8,11 @@ $(function() {
   var carouselList = $("#carousel ul");
 
   var imgs = $("#carousel img");
-  console.log(imgs);
 
   var kropka = $("body").append('<div class="carousel-counter"></div>');
-  console.log(kropka);
-
-  var countersDiv = $("#carousel-counter div"); console.log(imgs);
 
   $(imgs).each(function( index, elem ) {
-    $(kropka).append('<i class="fa fa-circle-o" aria-hidden="true">'); //dodaje kropke
+    $('<i class="fa fa-circle-o" aria-hidden="true">').appendTo(".carousel-counter"); //dodaje kropke
   });
 
   var changeSlide = function() {
